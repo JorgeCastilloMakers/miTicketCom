@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    max-width: 1600px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    background-color: black;
+}
+
+.header__logo{
+    width: 100%;
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__logo img{
+    max-width: 100px;
+}
+.header__logo > h2 {
+    font-size: clamp(14px, 1.5vw, 25px);
+}
+
+header > nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 20px;
+}
+
+header > nav > label {
+    display: none;
+    font-size: 24px;
+    padding-right: 25px;
+    cursor: pointer;
+    color: #F8D000;
+}
+header > nav > input {
+    display: none;
+}
+header > nav > ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    color: #F8D000;
+    transform: translateY(-10px);
+    transition: all 0.8s ease;
+}
+header nav ul li:hover {
+    transform: translateY(-5px);
+    transition: all 0.8s ease-in-out;
+}
+
+@media (max-width: 780px){
+    header > nav > ul {
+        display: none;
+    }
+    
+    header > nav > label {
+        display: block;
+    }
+    .nav-bar {
+        position: absolute;
+        background-color: #000000f0;
+        flex-direction: column;
+        gap: 40px;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        z-index: 20;
+        transition:all 0.8s ease;
+
+    }
+
+    .nav-bar > li > a {
+        font-size: 20px;
+    }
+
+    #nav-bar:checked + .nav-bar {
+        display: flex;
+    }
+}
+
+.hero {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 80%;
+    
+}
+
+.capa__hero{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.301);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.capa__hero > h1{
+    text-transform: uppercase;
+    color: #fff;
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(45px, 7vw, 95px);
+}
+.capa__hero > h1 > span{
+    text-transform: uppercase;
+    color: #F8D000;
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(25px, 3.5vw, 45px);
+}
+
+.capa__hero > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 70%;
+}
+.capa__hero > div > h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    font-size: clamp(20px, 2.5vw, 40px);
+}
+.capa__hero > div > h3 {
+    text-transform: uppercase;
+    color: #F8D000;
+    font-weight: 900;
+    font-size: clamp(15px, 2vw, 30px);
+}
+.capa__hero > .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding-top: 20px;
+    
+}
+
+.capa__hero > .button > a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #F8D000;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+}
+.capa__hero > .button > a:hover{
+    transform: translateY(-5px);
+    transform: translateX(-2px);
+    box-shadow: 0px 3px 16px -3px rgba(168,168,168,0.75);
+}
+@media (max-width: 780px){
+    .capa__hero > h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (max-width: 480px){
+
+    .capa__hero > div {
+        width: 95%;
+    }
+
+}
+
+/* FORMULARIO */
+.formulario{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.349);
+    position: absolute;
+    z-index: 50;
+    display: none;
+}
+
+.formulario:target{
+    display: flex;
+}
+
+.form__container{
+    background-color: #fff;
+    width: 40%;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 2%;
+    position: relative;
+}
+.form__container > a {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: black;
+}
+
+.form__container > h2{
+    text-transform: uppercase;
+    color: #F8D000;
+    font-style: italic;
+    font-weight: 900;
+    font-size: clamp(20px, 2.5vw, 35px);
+    text-align: center;
+}
+
+.form__container > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.form__container > form > .input_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+.form__container > form > .input_container > input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 100%;
+}
+.form__container > form > .input_container:nth-child(3){
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#cantidad-Tickets{
+    border: none;
+    border: 1.5px solid black;
+    outline: none;
+    width: 10%;
+    text-align: center;
+}
+.form__container > form > .btn_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__container > form > .btn_container > button{
+    border: none;
+    padding: 10px 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #F8D000;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+.form__container > form > .btn_container > button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 3px 16px -3px rgba(168,168,168,0.75);
+}
+
+@media (max-width: 520px){
+    .form__container{
+        background-color: #fff;
+        width: 90%;
+        height: 70%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 2%;
+        position: relative;
+    }
+
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Ticket.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" type="text/javascript" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+        <script src="https://kit.fontawesome.com/379028bca9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="assets/Miticket.com.png" alt="">
+        </div>
+
+        <nav class="nav">        
+            <label for="nav-bar"><i class="fa-solid fa-ellipsis-vertical"></i></i></label>
+            <input type="checkbox" name="menu" id="nav-bar">
+            <ul class="nav-bar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#formularioReserva">Reservar</a></li>
+                <li><a href="#">Ver Reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <div class="hero" id="home">
+        <video autoplay muted playsinline plays-inline loop>
+            <source src="assets/video_bg.mp4">
+            
+        </video>
+        <div class="capa__hero">
+            <h1>Las Pelotas <span>en Vivo</span></h1>
+            <div>
+                <h2>Playon Tigre Centro</h2>
+                <h3>Viernes 15/07 - 22:00hs</h3>
+            </div>
+            <div class="button">
+                <a href="#formularioReserva">Reserva Ahora</a>
+            </div>
+        </div>
+                <!-- FORMULARIO -->
+        <div class="formulario" id="formularioReserva">
+            <div class="form__container">
+                <h2>Reserva tus entradas</h2>
+                <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                <form action="">
+                    <div class="input_container">
+                        <label for="name_user">Ingresa tu Nombre</label>
+                        <input type="text" id="name_user">
+                    </div>
+                    <div class="input_container">
+                        <label for="email_user">Ingresa tu email</label>
+                        <input type="email" id="email_user">
+                    </div>
+                    <div class="input_container">
+                        <label for="cantidad-Tickets">Elegi la cantidad</label>
+                        <input type="number" id="cantidad-Tickets" placeholder="0">
+                    </div>
+                    <div class="btn_container">
+                        <button onclick="grabarDatos()" type="button">Reservar</button>
+                    </div>
+                </form>
+        </div>
+
+        <!-- FIN FORMULARIO -->
+    </div>
+    <!-- FIN HERO -->
+
+</body>
+</html>
